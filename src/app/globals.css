@@ -1,0 +1,246 @@
+@import "tailwindcss";
+@import "./flower_garden.css";
+
+@layer base {
+  :root {
+    --font-serif: var(--font-serif), "Playfair Display", Georgia, serif;
+    --font-handwriting: var(--font-handwriting), "Dancing Script", cursive;
+    --font-sans: var(--font-sans), "Be Vietnam Pro", system-ui, sans-serif;
+  }
+}
+
+@theme {
+  --font-serif: var(--font-serif), "Playfair Display", Georgia, serif;
+  --font-handwriting: var(--font-handwriting), "Dancing Script", cursive;
+  --font-sans: var(--font-sans), "Be Vietnam Pro", system-ui, sans-serif;
+
+  --color-rose-gold: #e0a96d;
+  --color-champagne: #f7e7ce;
+  --color-paper-cream: #fffdf9;
+  --color-petal-pink: #fbcfe8;
+}
+
+/* 3D Perspective Utilities */
+.perspective-1000 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Glowing Neon Sky Text */
+.neon-glow-cyan {
+  color: #ffffff;
+  text-shadow: 
+    0 0 5px #e0f2fe,
+    0 0 10px #7dd3fc,
+    0 0 20px #38bdf8,
+    0 0 40px #0284c7,
+    0 0 60px #0369a1;
+}
+
+.neon-glow-pink {
+  color: #ffffff;
+  text-shadow: 
+    0 0 5px #fff1f2,
+    0 0 10px #f472b6,
+    0 0 20px #ec4899,
+    0 0 40px #db2777;
+}
+
+/* Shooting star meteor animation */
+@keyframes meteor {
+  0% {
+    transform: rotate(215deg) translateX(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(215deg) translateX(-600px);
+    opacity: 0;
+  }
+}
+
+.animate-meteor {
+  animation: meteor 6s linear infinite;
+}
+
+.animate-meteor-delayed {
+  animation: meteor 8s linear 3s infinite;
+}
+
+/* Tulip Bloom Glow */
+.tulip-glow {
+  filter: drop-shadow(0 0 12px rgba(244, 63, 94, 0.65)) drop-shadow(0 0 25px rgba(236, 72, 153, 0.4));
+}
+
+/* Subtitle Lyric Glow */
+.lyric-glow {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 8px rgba(186, 230, 253, 0.8), 0 0 16px rgba(56, 189, 248, 0.5);
+  letter-spacing: 0.18em;
+}
+
+/* Luxury Paper Texture effect */
+.luxury-card-texture {
+  background-color: #fffdfa;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(254, 242, 244, 0.6) 100%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+  box-shadow: 
+    0 20px 45px -10px rgba(190, 24, 93, 0.15),
+    0 10px 25px -5px rgba(244, 114, 182, 0.2),
+    0 0 0 1px rgba(224, 169, 109, 0.35) inset,
+    0 0 0 4px rgba(255, 255, 255, 0.8) inset;
+}
+
+/* Envelope Paper texture */
+.envelope-texture {
+  background: linear-gradient(135deg, #fce7ed 0%, #fbcfe8 50%, #f4a6be 100%);
+  box-shadow: 
+    0 25px 50px -12px rgba(157, 23, 77, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+.envelope-flap-texture {
+  background: linear-gradient(180deg, #fce7ed 0%, #f8b4c8 100%);
+  box-shadow: 0 4px 15px rgba(157, 23, 77, 0.15);
+}
+
+.envelope-pocket-texture {
+  background: linear-gradient(180deg, rgba(251, 207, 232, 0.9) 0%, #f472b6 100%);
+}
+
+/* Gold Shimmer Text and Borders */
+.gold-shimmer {
+  background: linear-gradient(
+    115deg,
+    #b8860b 0%,
+    #e5b958 25%,
+    #fff2a8 50%,
+    #e5b958 75%,
+    #b8860b 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+.rose-gold-gradient {
+  background: linear-gradient(
+    135deg,
+    #9d174d 0%,
+    #db2777 30%,
+    #e0a96d 50%,
+    #f472b6 70%,
+    #be185d 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s ease-in-out infinite alternate;
+}
+
+/* Golden Foil Border */
+.gold-border {
+  border: 1.5px solid transparent;
+  background-image: 
+    linear-gradient(#fffdf9, #fffdf9), 
+    linear-gradient(135deg, #e0a96d 0%, #ffe082 50%, #c58f4a 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* Gentle Floating Animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.8deg);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+/* Shimmer Keyframe */
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Gentle Pulsing Glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+    filter: blur(25px);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08);
+    filter: blur(35px);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Gentle Breeze Sway for Flowers */
+@keyframes swayLeft {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes swayRight {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3.5deg);
+  }
+}
+
+.animate-sway-left {
+  animation: swayLeft 4.5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-sway-right {
+  animation: swayRight 5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
