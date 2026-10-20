@@ -3,18 +3,20 @@
 import React from "react";
 
 interface NightGardenSceneProps {
-  target?: "phuong" | "me" | "both";
+  target?: "em" | "phuong" | "me" | "chi" | "both";
   sisterName?: string;
   customMessage?: string;
 }
 
 export default function NightGardenScene({
-  target = "phuong",
+  target = "em",
   sisterName = "Phượng",
   customMessage,
 }: NightGardenSceneProps) {
+  const isClassic = target === "me" || target === "chi";
+
   return (
-    <div className={`night-garden-container ${target === "me" ? "theme-classic" : "theme-colorful"}`}>
+    <div className={`night-garden-container ${isClassic ? "theme-classic" : "theme-colorful"}`}>
 
 
     <div className="night" aria-hidden="true"></div>
@@ -119,23 +121,37 @@ export default function NightGardenScene({
             Gửi <strong className="greeting__name">mẹ dấu yêu</strong> — cảm ơn mẹ đã luôn
             yêu thương và chăm sóc chúng con <span className="greeting__heart">💕</span>
           </span>
+        ) : target === "chi" ? (
+          <span className="greeting__line">
+            Gửi <strong className="greeting__name">chị dấu yêu</strong> — chúc chị ngày 20/10 luôn xinh đẹp,
+            rạng rỡ, ngập tràn niềm vui và hạnh phúc <span className="greeting__heart">💕</span>
+          </span>
         ) : target === "both" ? (
           <>
             <span className="greeting__line">
-              Chúc <strong className="greeting__name">{sisterName}</strong> ngày 20/10 thật nhiều niềm vui, xinh tươi và hạnh phúc <span className="greeting__heart">❤</span>
+              Chúc <strong className="greeting__name">em</strong> ngày 20/10 thật nhiều niềm vui, xinh tươi và hạnh phúc <span className="greeting__heart">❤</span>
             </span>
             <span className="greeting__line">
               Gửi <strong className="greeting__name">mẹ dấu yêu</strong> — cảm ơn mẹ đã luôn
               yêu thương và chăm sóc chúng con <span className="greeting__heart">💕</span>
             </span>
           </>
+        ) : target === "phuong" ? (
+          <>
+            <span className="greeting__line">
+              Chúc <strong className="greeting__name">{sisterName}</strong> ngày 20/10 ngập tràn niềm vui, luôn xinh đẹp và rạng rỡ như những đóa hoa nở rộ.
+            </span>
+            <span className="greeting__line">
+              Mong {sisterName} luôn hạnh phúc, may mắn, bình an và gặt hái được mọi điều ước mơ trong cuộc sống <span className="greeting__heart">❤</span>
+            </span>
+          </>
         ) : (
           <>
             <span className="greeting__line">
-              Chúc <strong className="greeting__name">Phượng</strong> ngày 20/10 ngập tràn niềm vui, luôn xinh đẹp và rạng rỡ như những đóa hoa nở rộ.
+              Chúc <strong className="greeting__name">em</strong> ngày 20/10 ngập tràn niềm vui, luôn xinh đẹp và rạng rỡ như những đóa hoa nở rộ.
             </span>
             <span className="greeting__line">
-              Mong bạn luôn hạnh phúc, may mắn, bình an và gặt hái được mọi điều ước mơ trong cuộc sống <span className="greeting__heart">❤</span>
+              Mong em luôn hạnh phúc, may mắn, bình an và gặt hái được mọi điều ước mơ trong cuộc sống <span className="greeting__heart">❤</span>
             </span>
           </>
         )}
@@ -264,7 +280,7 @@ export default function NightGardenScene({
         </div>
       </div>
 
-      {target !== "me" && (
+      {!isClassic && (
         <>
       <div className="flower flower--6">
         <div className="flower__leafs flower__leafs--6">

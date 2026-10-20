@@ -8,7 +8,16 @@ function PageContent() {
   const searchParams = useSearchParams();
   const to = searchParams.get("to")?.toLowerCase();
 
-  const target = to === "me" ? "me" : to === "both" || to === "all" ? "both" : "phuong";
+  const target =
+    to === "me"
+      ? "me"
+      : to === "chi"
+      ? "chi"
+      : to === "phuong"
+      ? "phuong"
+      : to === "both" || to === "all"
+      ? "both"
+      : "em";
 
   return <GardenExperience target={target} />;
 }

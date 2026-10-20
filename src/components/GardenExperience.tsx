@@ -5,10 +5,10 @@ import NightGardenScene from "@/components/NightGardenScene";
 import RomanticAudio from "@/components/RomanticAudio";
 
 interface GardenExperienceProps {
-  target?: "phuong" | "me" | "both";
+  target?: "em" | "phuong" | "me" | "chi" | "both";
 }
 
-export default function GardenExperience({ target = "phuong" }: GardenExperienceProps) {
+export default function GardenExperience({ target = "em" }: GardenExperienceProps) {
   const [hasInteracted, setHasInteracted] = useState(false);
 
   // Handle first user interaction to unlock audio
