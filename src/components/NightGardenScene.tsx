@@ -14,7 +14,8 @@ export default function NightGardenScene({
   customMessage,
 }: NightGardenSceneProps) {
   return (
-    <div className="night-garden-container">
+    <div className={`night-garden-container ${target === "me" ? "theme-classic" : "theme-colorful"}`}>
+
 
     <div className="night" aria-hidden="true"></div>
     <div className="moon" aria-hidden="true">
@@ -121,7 +122,7 @@ export default function NightGardenScene({
         ) : target === "both" ? (
           <>
             <span className="greeting__line">
-              Gửi em <strong className="greeting__name">{sisterName}</strong> — chúc em mãi xinh tươi,
+              Gửi <strong className="greeting__name">{sisterName}</strong> — chúc em mãi xinh tươi,
               vui vẻ và thật nhiều hạnh phúc <span className="greeting__heart">❤</span>
             </span>
             <span className="greeting__line">
@@ -131,7 +132,7 @@ export default function NightGardenScene({
           </>
         ) : (
           <span className="greeting__line">
-            Gửi em <strong className="greeting__name">{sisterName}</strong> — chúc em mãi xinh tươi,
+            Gửi <strong className="greeting__name">{sisterName}</strong> — chúc em mãi xinh tươi,
             vui vẻ và thật nhiều hạnh phúc <span className="greeting__heart">❤</span>
           </span>
         )}
@@ -260,6 +261,8 @@ export default function NightGardenScene({
         </div>
       </div>
 
+      {target !== "me" && (
+        <>
       <div className="flower flower--6">
         <div className="flower__leafs flower__leafs--6">
           <div className="flower__leaf flower__leaf--1"></div>
@@ -363,6 +366,8 @@ export default function NightGardenScene({
           <div className="flower__line__leaf flower__line__leaf--4"></div>
         </div>
       </div>
+        </>
+      )}
 
       <div className="grow-ans" style={{ '--d': '1.2s' } as React.CSSProperties}>
         <div className="flower__g-long">

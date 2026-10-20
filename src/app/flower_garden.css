@@ -28,6 +28,17 @@ body,
   justify-content: center;
   min-height: 100vh;
   width: 100%;
+  background-color: var(--dark-color);
+  background-image: radial-gradient(70vmax 50vmax at 0% 85%, rgba(224, 74, 147, 0.3), transparent 70%), radial-gradient(70vmax 50vmax at 100% 85%, rgba(224, 74, 147, 0.3), transparent 70%), radial-gradient(90vmax 60vmax at 50% 110%, rgba(255, 142, 199, 0.28), transparent 72%), linear-gradient(to bottom, #2a0618 0%, #1d0411 45%, #16030d 100%);
+  background-attachment: fixed;
+  overflow: hidden;
+  perspective: 1000px;
+  padding: 50px 0px;
+  position: relative;
+}
+
+/* Giao dien cuc quang da sac mau (danh rieng cho Em) */
+.night-garden-container.theme-colorful {
   background-color: #060216;
   background-image: 
     radial-gradient(85vmax 60vmax at 12% 18%, rgba(147, 51, 234, 0.3), transparent 70%),
@@ -37,14 +48,27 @@ body,
     radial-gradient(70vmax 55vmax at 98% 85%, rgba(245, 158, 11, 0.24), transparent 70%),
     radial-gradient(90vmax 65vmax at 50% 110%, rgba(219, 39, 119, 0.38), transparent 75%),
     linear-gradient(to bottom, #060217 0%, #0c072b 30%, #150936 60%, #08031a 100%);
-  background-attachment: fixed;
-  overflow: hidden;
-  perspective: 1000px;
-  padding: 50px 0px;
-  position: relative;
 }
 
 .night {
+  background-image: radial-gradient(1.5px 1.5px at 12% 18%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 28% 9%, var(--p-light), transparent),
+    radial-gradient(2px 2px at 44% 24%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 61% 12%, var(--p-mid), transparent),
+    radial-gradient(1.5px 1.5px at 76% 28%, #fff, transparent),
+    radial-gradient(2px 2px at 89% 15%, var(--p-light), transparent),
+    radial-gradient(1.5px 1.5px at 7% 42%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 34% 48%, var(--p-mid), transparent),
+    radial-gradient(1.5px 1.5px at 55% 38%, #fff, transparent),
+    radial-gradient(2px 2px at 82% 46%, var(--p-light), transparent),
+    radial-gradient(1.5px 1.5px at 95% 36%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 19% 62%, var(--p-light), transparent),
+    radial-gradient(1.5px 1.5px at 68% 58%, #fff, transparent),
+    radial-gradient(60vmin 60vmin at 50% 100%, rgba(224, 74, 147, 0.22), transparent 70%);
+  animation: twinkle 5s ease-in-out infinite;
+}
+
+.theme-colorful .night {
   background-image: 
     radial-gradient(1.5px 1.5px at 12% 18%, #ffffff, transparent),
     radial-gradient(2px 2px at 28% 9%, #a5f3fc, transparent),
@@ -62,7 +86,6 @@ body,
     radial-gradient(2px 2px at 4% 15%, #f472b6, transparent),
     radial-gradient(1.5px 1.5px at 92% 52%, #38bdf8, transparent),
     radial-gradient(60vmin 60vmin at 50% 100%, rgba(219, 39, 119, 0.22), transparent 70%);
-  animation: twinkle 5s ease-in-out infinite;
 }
 
 @keyframes twinkle {
@@ -90,9 +113,14 @@ body,
   inset: 0;
   border-radius: 50%;
   overflow: hidden;
+  background-image: radial-gradient(circle at 32% 28%, #fff 0%, var(--p-soft) 28%, var(--p-light) 52%, var(--p-mid) 78%, var(--p-deep) 100%);
+  box-shadow: inset -0.8vmin -0.8vmin 2.4vmin rgba(224, 74, 147, 0.55), inset 0.5vmin 0.5vmin 1.6vmin rgba(255, 255, 255, 0.6);
+  animation: moon-glow 6s ease-in-out infinite;
+}
+
+.theme-colorful .moon__disc {
   background-image: radial-gradient(circle at 32% 28%, #ffffff 0%, #fef9c3 25%, #e0e7ff 52%, #c084fc 78%, #6366f1 100%);
   box-shadow: inset -0.8vmin -0.8vmin 2.4vmin rgba(139, 92, 246, 0.55), inset 0.5vmin 0.5vmin 1.6vmin rgba(255, 255, 255, 0.65);
-  animation: moon-glow 6s ease-in-out infinite;
 }
 
 /* Craters, so it reads as a moon instead of a blank ball */
@@ -314,19 +342,19 @@ body,
   transform: rotate(-45deg);
   animation: heart-beat 1.2s ease-in-out infinite;
 }
-.heart-float:nth-child(4n+1) .heart {
+.theme-colorful .heart-float:nth-child(4n+1) .heart {
   background-image: linear-gradient(135deg, #fb7185, #e11d48);
   box-shadow: 0 0 1.4vmin rgba(225, 29, 72, 0.8);
 }
-.heart-float:nth-child(4n+2) .heart {
+.theme-colorful .heart-float:nth-child(4n+2) .heart {
   background-image: linear-gradient(135deg, #c084fc, #9333ea);
   box-shadow: 0 0 1.4vmin rgba(147, 51, 234, 0.8);
 }
-.heart-float:nth-child(4n+3) .heart {
+.theme-colorful .heart-float:nth-child(4n+3) .heart {
   background-image: linear-gradient(135deg, #38bdf8, #0284c7);
   box-shadow: 0 0 1.4vmin rgba(2, 132, 199, 0.8);
 }
-.heart-float:nth-child(4n) .heart {
+.theme-colorful .heart-float:nth-child(4n) .heart {
   background-image: linear-gradient(135deg, #fbbf24, #d97706);
   box-shadow: 0 0 1.4vmin rgba(217, 119, 6, 0.8);
 }
@@ -408,23 +436,23 @@ body,
   filter: drop-shadow(0 0 0.6vmin rgba(244, 114, 182, 0.5));
   animation: petal-fall var(--t, 13s) var(--d, 0s) linear infinite;
 }
-.petal:nth-child(5n+1) {
+.theme-colorful .petal:nth-child(5n+1) {
   background-image: linear-gradient(to bottom right, #ffd4e5, #ec4899);
   filter: drop-shadow(0 0 0.6vmin rgba(236, 72, 153, 0.5));
 }
-.petal:nth-child(5n+2) {
+.theme-colorful .petal:nth-child(5n+2) {
   background-image: linear-gradient(to bottom right, #fed7aa, #f97316);
   filter: drop-shadow(0 0 0.6vmin rgba(249, 115, 22, 0.5));
 }
-.petal:nth-child(5n+3) {
+.theme-colorful .petal:nth-child(5n+3) {
   background-image: linear-gradient(to bottom right, #cffafe, #06b6d4);
   filter: drop-shadow(0 0 0.6vmin rgba(6, 182, 212, 0.5));
 }
-.petal:nth-child(5n+4) {
+.theme-colorful .petal:nth-child(5n+4) {
   background-image: linear-gradient(to bottom right, #fef08a, #eab308);
   filter: drop-shadow(0 0 0.6vmin rgba(234, 179, 8, 0.5));
 }
-.petal:nth-child(5n) {
+.theme-colorful .petal:nth-child(5n) {
   background-image: linear-gradient(to bottom right, #e9d5ff, #a855f7);
   filter: drop-shadow(0 0 0.6vmin rgba(168, 85, 247, 0.5));
 }
@@ -936,8 +964,36 @@ body,
   z-index: 10;
   --fl-speed: 0.8s;
 }
-/* Flower 1: Radiant Rose Pink (Center tall) */
+
+/* Vi tri co ban cua hoa 1-5 (dung cho ca 2 giao dien) */
 .flower--1 {
+  animation: moving-flower-1 4s linear infinite;
+}
+.flower--2 {
+  left: 50%;
+  transform: rotate(20deg) rotate(180deg);
+  animation: moving-flower-2 4s linear infinite;
+}
+.flower--3 {
+  left: 50%;
+  transform: rotate(-15deg) rotate(180deg);
+  animation: moving-flower-3 4s linear infinite;
+}
+.flower--4 {
+  left: -34vmin;
+  bottom: 12vmin;
+  transform: rotate(-12deg) scale(0.72) rotate(180deg);
+  animation: moving-flower-4 4.5s linear infinite;
+}
+.flower--5 {
+  left: 34vmin;
+  bottom: 13vmin;
+  transform: rotate(14deg) scale(0.68) rotate(180deg);
+  animation: moving-flower-5 5s linear infinite;
+}
+
+/* Flower 1: Radiant Rose Pink (Center tall) */
+.theme-colorful .flower--1 {
   --p-light: #ffd4e5;
   --p-mid: #ff69b4;
   --p-deep: #db2777;
@@ -960,7 +1016,7 @@ body,
 .flower--1 .flower__line__leaf--6 { animation: blooming-leaf-left var(--fl-speed) 2s backwards; }
 
 /* Flower 2: Royal Amethyst Violet (Right-center) */
-.flower--2 {
+.theme-colorful .flower--2 {
   --p-light: #f3e8ff;
   --p-mid: #c084fc;
   --p-deep: #7e22ce;
@@ -983,7 +1039,7 @@ body,
 .flower--2 .flower__line__leaf--4 { animation: blooming-leaf-left var(--fl-speed) 1.3s backwards; }
 
 /* Flower 3: Golden Sunburst Amber (Left-center) */
-.flower--3 {
+.theme-colorful .flower--3 {
   --p-light: #fef9c3;
   --p-mid: #facc15;
   --p-deep: #ca8a04;
@@ -1005,7 +1061,7 @@ body,
 .flower--3 .flower__line__leaf--4 { animation: blooming-leaf-left var(--fl-speed) 1.9s backwards; }
 
 /* Flower 4: Celestial Aquamarine Cyan (Mid-left) */
-.flower--4 {
+.theme-colorful .flower--4 {
   --p-light: #cffafe;
   --p-mid: #22d3ee;
   --p-deep: #0891b2;
@@ -1029,7 +1085,7 @@ body,
 .flower--4 .flower__line__leaf--4 { animation: blooming-leaf-left var(--fl-speed) 2.2s backwards; }
 
 /* Flower 5: Passion Crimson Ruby (Mid-right) */
-.flower--5 {
+.theme-colorful .flower--5 {
   --p-light: #ffe4e6;
   --p-mid: #fb7185;
   --p-deep: #be123c;
@@ -2263,19 +2319,19 @@ body,
   box-shadow: 0 0 1.6vmin 0.3vmin rgba(250, 204, 21, 0.9);
   animation: firefly-drift var(--t, 9s) var(--d, 0s) ease-in-out infinite;
 }
-.firefly:nth-child(4n+1) {
+.theme-colorful .firefly:nth-child(4n+1) {
   background-color: #fef08a;
   box-shadow: 0 0 1.6vmin 0.3vmin rgba(250, 204, 21, 0.9);
 }
-.firefly:nth-child(4n+2) {
+.theme-colorful .firefly:nth-child(4n+2) {
   background-color: #a5f3fc;
   box-shadow: 0 0 1.6vmin 0.3vmin rgba(34, 211, 238, 0.9);
 }
-.firefly:nth-child(4n+3) {
+.theme-colorful .firefly:nth-child(4n+3) {
   background-color: #fbcfe8;
   box-shadow: 0 0 1.6vmin 0.3vmin rgba(244, 114, 182, 0.9);
 }
-.firefly:nth-child(4n) {
+.theme-colorful .firefly:nth-child(4n) {
   background-color: #bbf7d0;
   box-shadow: 0 0 1.6vmin 0.3vmin rgba(52, 211, 153, 0.9);
 }
