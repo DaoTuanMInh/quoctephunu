@@ -1,7 +1,7 @@
 import GardenExperience from "@/components/GardenExperience";
 
 export const metadata = {
-  title: "Chúc mừng 20/10 - Gửi em Phượng",
+  title: "Chúc mừng 20/10 - Gửi Phượng",
 };
 
 export default function PhuongPage() {
