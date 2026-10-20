@@ -122,8 +122,7 @@ export default function NightGardenScene({
         ) : target === "both" ? (
           <>
             <span className="greeting__line">
-              Gửi <strong className="greeting__name">{sisterName}</strong> — chúc em mãi xinh tươi,
-              vui vẻ và thật nhiều hạnh phúc <span className="greeting__heart">❤</span>
+              Chúc <strong className="greeting__name">{sisterName}</strong> ngày 20/10 thật nhiều niềm vui, xinh tươi và hạnh phúc <span className="greeting__heart">❤</span>
             </span>
             <span className="greeting__line">
               Gửi <strong className="greeting__name">mẹ dấu yêu</strong> — cảm ơn mẹ đã luôn
@@ -131,10 +130,14 @@ export default function NightGardenScene({
             </span>
           </>
         ) : (
-          <span className="greeting__line">
-            Gửi <strong className="greeting__name">{sisterName}</strong> — chúc em mãi xinh tươi,
-            vui vẻ và thật nhiều hạnh phúc <span className="greeting__heart">❤</span>
-          </span>
+          <>
+            <span className="greeting__line">
+              Chúc <strong className="greeting__name">Phượng</strong> ngày 20/10 ngập tràn niềm vui, luôn xinh đẹp và rạng rỡ như những đóa hoa nở rộ.
+            </span>
+            <span className="greeting__line">
+              Mong bạn luôn hạnh phúc, may mắn, bình an và gặt hái được mọi điều ước mơ trong cuộc sống <span className="greeting__heart">❤</span>
+            </span>
+          </>
         )}
       </p>
     </div>

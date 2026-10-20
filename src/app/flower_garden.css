@@ -21,20 +21,25 @@
   --f-light: #ff9ccb;
 }
 
-body,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #060216;
+  overflow-x: hidden;
+}
+
 .night-garden-container {
   display: flex;
   align-items: flex-end;
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  background-color: var(--dark-color);
-  background-image: radial-gradient(70vmax 50vmax at 0% 85%, rgba(224, 74, 147, 0.3), transparent 70%), radial-gradient(70vmax 50vmax at 100% 85%, rgba(224, 74, 147, 0.3), transparent 70%), radial-gradient(90vmax 60vmax at 50% 110%, rgba(255, 142, 199, 0.28), transparent 72%), linear-gradient(to bottom, #2a0618 0%, #1d0411 45%, #16030d 100%);
-  background-attachment: fixed;
   overflow: hidden;
   perspective: 1000px;
   padding: 50px 0px;
   position: relative;
+  background-color: var(--dark-color);
+  background-image: radial-gradient(70vmax 50vmax at 0% 85%, rgba(224, 74, 147, 0.3), transparent 70%), radial-gradient(70vmax 50vmax at 100% 85%, rgba(224, 74, 147, 0.3), transparent 70%), radial-gradient(90vmax 60vmax at 50% 110%, rgba(255, 142, 199, 0.28), transparent 72%), linear-gradient(to bottom, #2a0618 0%, #1d0411 45%, #16030d 100%);
 }
 
 /* Giao dien cuc quang da sac mau (danh rieng cho Em) */
@@ -199,6 +204,8 @@ body,
 }
 
 .night {
+  pointer-events: none;
+  z-index: 0;
   background-image: radial-gradient(1.5px 1.5px at 12% 18%, #fff, transparent),
     radial-gradient(1.5px 1.5px at 28% 9%, var(--p-light), transparent),
     radial-gradient(2px 2px at 44% 24%, #fff, transparent),
@@ -1119,24 +1126,24 @@ body,
 }
 .flower--2 {
   left: 50%;
-  transform: rotate(20deg) rotate(180deg);
+  transform: rotate(20deg);
   animation: moving-flower-2 4s linear infinite;
 }
 .flower--3 {
   left: 50%;
-  transform: rotate(-15deg) rotate(180deg);
+  transform: rotate(-15deg);
   animation: moving-flower-3 4s linear infinite;
 }
 .flower--4 {
   left: -34vmin;
   bottom: 12vmin;
-  transform: rotate(-12deg) scale(0.72) rotate(180deg);
+  transform: rotate(-12deg) scale(0.72);
   animation: moving-flower-4 4.5s linear infinite;
 }
 .flower--5 {
   left: 34vmin;
   bottom: 13vmin;
-  transform: rotate(14deg) scale(0.68) rotate(180deg);
+  transform: rotate(14deg) scale(0.68);
   animation: moving-flower-5 5s linear infinite;
 }
 
