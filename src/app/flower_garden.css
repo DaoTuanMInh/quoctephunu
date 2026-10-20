@@ -28,8 +28,15 @@ body,
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  background-color: var(--dark-color);
-  background-image: radial-gradient(70vmax 50vmax at 0% 85%, rgba(224, 74, 147, 0.3), transparent 70%), radial-gradient(70vmax 50vmax at 100% 85%, rgba(224, 74, 147, 0.3), transparent 70%), radial-gradient(90vmax 60vmax at 50% 110%, rgba(255, 142, 199, 0.28), transparent 72%), linear-gradient(to bottom, #2a0618 0%, #1d0411 45%, #16030d 100%);
+  background-color: #060216;
+  background-image: 
+    radial-gradient(85vmax 60vmax at 12% 18%, rgba(147, 51, 234, 0.3), transparent 70%),
+    radial-gradient(80vmax 55vmax at 88% 22%, rgba(6, 182, 212, 0.26), transparent 70%),
+    radial-gradient(70vmax 50vmax at 50% 10%, rgba(244, 63, 94, 0.24), transparent 65%),
+    radial-gradient(70vmax 55vmax at 2% 85%, rgba(16, 185, 129, 0.22), transparent 70%),
+    radial-gradient(70vmax 55vmax at 98% 85%, rgba(245, 158, 11, 0.24), transparent 70%),
+    radial-gradient(90vmax 65vmax at 50% 110%, rgba(219, 39, 119, 0.38), transparent 75%),
+    linear-gradient(to bottom, #060217 0%, #0c072b 30%, #150936 60%, #08031a 100%);
   background-attachment: fixed;
   overflow: hidden;
   perspective: 1000px;
@@ -38,141 +45,23 @@ body,
 }
 
 .night {
-  position: fixed;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  filter: blur(0.1vmin);
-}
-
-.greeting {
-  position: fixed;
-  top: 4vmin;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(92vw, 1000px);
-  text-align: center;
-  z-index: 300;
-  pointer-events: none;
-}
-
-.happy-woman-day {
-  color: #fff;
-  font-size: clamp(20px, 5vmin, 50px);
-  text-shadow: 0 0 1.5vmin var(--p-glow), 0 0 4vmin var(--p-deep);
-  animation: hwd-float 4s ease-in-out infinite;
-}
-
-.greeting__title {
-  margin-top: 1.5vmin;
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  font-size: clamp(17px, 3.6vmin, 38px);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  line-height: 1.35;
-}
-
-.greeting__word {
-  display: inline-block;
-  margin: 0 0.18em;
-  background-image: linear-gradient(90deg, var(--p-light), #fff 40%, var(--p-mid) 60%, var(--p-deep));
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 0 1vmin rgba(255, 111, 181, 0.6));
-  animation: word-drop 0.9s calc(var(--i) * 0.14s + 1s) backwards, shimmer 6s linear infinite;
-}
-
-.greeting__word--date {
-  animation: word-drop 0.9s 2.1s backwards, date-pop 2.5s 2.1s ease-in-out infinite;
-}
-
-.greeting__sub {
-  margin: 1.4vmin auto 0;
-  max-width: 62ch;
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  font-size: clamp(12px, 1.9vmin, 19px);
-  line-height: 1.6;
-  color: var(--p-light);
-  text-shadow: 0 0 1vmin rgba(224, 74, 147, 0.7);
-  animation: sub-fade 1.6s 2.8s backwards;
-}
-
-.greeting__heart {
-  display: inline-block;
-  color: var(--p-glow);
-  animation: text-heartbeat 1.3s ease-in-out infinite;
-}
-
-@keyframes hwd-float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-1.2vmin);
-  }
-}
-@keyframes word-drop {
-  0% {
-    opacity: 0;
-    transform: translateY(-3vmin) scale(0.7) rotate(-6deg);
-  }
-}
-@keyframes shimmer {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
-}
-@keyframes date-pop {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.14);
-  }
-}
-@keyframes sub-fade {
-  0% {
-    opacity: 0;
-    transform: translateY(2.5vmin);
-  }
-}
-@keyframes text-heartbeat {
-  0%, 100% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.35);
-  }
-  40% {
-    transform: scale(1.05);
-  }
-  60% {
-    transform: scale(1.3);
-  }
-}
-/* Twinkling star field + pink haze */
-.night {
-  background-image: radial-gradient(1.5px 1.5px at 12% 18%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 28% 9%, var(--p-light), transparent),
-    radial-gradient(2px 2px at 44% 24%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 61% 12%, var(--p-mid), transparent),
-    radial-gradient(1.5px 1.5px at 76% 28%, #fff, transparent),
-    radial-gradient(2px 2px at 89% 15%, var(--p-light), transparent),
-    radial-gradient(1.5px 1.5px at 7% 42%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 34% 48%, var(--p-mid), transparent),
-    radial-gradient(1.5px 1.5px at 55% 38%, #fff, transparent),
-    radial-gradient(2px 2px at 82% 46%, var(--p-light), transparent),
-    radial-gradient(1.5px 1.5px at 95% 36%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 19% 62%, var(--p-light), transparent),
-    radial-gradient(1.5px 1.5px at 68% 58%, #fff, transparent),
-    radial-gradient(60vmin 60vmin at 50% 100%, rgba(224, 74, 147, 0.22), transparent 70%);
+  background-image: 
+    radial-gradient(1.5px 1.5px at 12% 18%, #ffffff, transparent),
+    radial-gradient(2px 2px at 28% 9%, #a5f3fc, transparent),
+    radial-gradient(2px 2px at 44% 24%, #fef08a, transparent),
+    radial-gradient(1.5px 1.5px at 61% 12%, #f472b6, transparent),
+    radial-gradient(2px 2px at 76% 28%, #c084fc, transparent),
+    radial-gradient(2px 2px at 89% 15%, #67e8f9, transparent),
+    radial-gradient(1.5px 1.5px at 7% 42%, #fed7aa, transparent),
+    radial-gradient(2px 2px at 34% 48%, #bbf7d0, transparent),
+    radial-gradient(2px 2px at 55% 38%, #fbcfe8, transparent),
+    radial-gradient(2px 2px at 82% 46%, #e0e7ff, transparent),
+    radial-gradient(1.5px 1.5px at 95% 36%, #fef9c3, transparent),
+    radial-gradient(2px 2px at 19% 62%, #a5f3fc, transparent),
+    radial-gradient(1.5px 1.5px at 68% 58%, #ffffff, transparent),
+    radial-gradient(2px 2px at 4% 15%, #f472b6, transparent),
+    radial-gradient(1.5px 1.5px at 92% 52%, #38bdf8, transparent),
+    radial-gradient(60vmin 60vmin at 50% 100%, rgba(219, 39, 119, 0.22), transparent 70%);
   animation: twinkle 5s ease-in-out infinite;
 }
 
@@ -201,8 +90,8 @@ body,
   inset: 0;
   border-radius: 50%;
   overflow: hidden;
-  background-image: radial-gradient(circle at 32% 28%, #fff 0%, var(--p-soft) 28%, var(--p-light) 52%, var(--p-mid) 78%, var(--p-deep) 100%);
-  box-shadow: inset -0.8vmin -0.8vmin 2.4vmin rgba(224, 74, 147, 0.55), inset 0.5vmin 0.5vmin 1.6vmin rgba(255, 255, 255, 0.6);
+  background-image: radial-gradient(circle at 32% 28%, #ffffff 0%, #fef9c3 25%, #e0e7ff 52%, #c084fc 78%, #6366f1 100%);
+  box-shadow: inset -0.8vmin -0.8vmin 2.4vmin rgba(139, 92, 246, 0.55), inset 0.5vmin 0.5vmin 1.6vmin rgba(255, 255, 255, 0.65);
   animation: moon-glow 6s ease-in-out infinite;
 }
 
@@ -420,10 +309,26 @@ body,
   position: relative;
   width: var(--s, 2.4vmin);
   height: var(--s, 2.4vmin);
-  background-image: linear-gradient(135deg, var(--p-mid), var(--p-deep));
-  box-shadow: 0 0 1.4vmin rgba(255, 111, 181, 0.85);
+  background-image: linear-gradient(135deg, #f472b6, #db2777);
+  box-shadow: 0 0 1.4vmin rgba(244, 114, 182, 0.85);
   transform: rotate(-45deg);
   animation: heart-beat 1.2s ease-in-out infinite;
+}
+.heart-float:nth-child(4n+1) .heart {
+  background-image: linear-gradient(135deg, #fb7185, #e11d48);
+  box-shadow: 0 0 1.4vmin rgba(225, 29, 72, 0.8);
+}
+.heart-float:nth-child(4n+2) .heart {
+  background-image: linear-gradient(135deg, #c084fc, #9333ea);
+  box-shadow: 0 0 1.4vmin rgba(147, 51, 234, 0.8);
+}
+.heart-float:nth-child(4n+3) .heart {
+  background-image: linear-gradient(135deg, #38bdf8, #0284c7);
+  box-shadow: 0 0 1.4vmin rgba(2, 132, 199, 0.8);
+}
+.heart-float:nth-child(4n) .heart {
+  background-image: linear-gradient(135deg, #fbbf24, #d97706);
+  box-shadow: 0 0 1.4vmin rgba(217, 119, 6, 0.8);
 }
 
 .heart::before,
@@ -498,10 +403,30 @@ body,
   width: var(--s, 2.4vmin);
   height: calc(var(--s, 2.4vmin) * 0.75);
   border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
-  background-image: linear-gradient(to bottom right, var(--p-light), var(--p-mid));
+  background-image: linear-gradient(to bottom right, #fbcfe8, #f472b6);
   opacity: 0.85;
-  filter: drop-shadow(0 0 0.6vmin rgba(255, 142, 199, 0.5));
+  filter: drop-shadow(0 0 0.6vmin rgba(244, 114, 182, 0.5));
   animation: petal-fall var(--t, 13s) var(--d, 0s) linear infinite;
+}
+.petal:nth-child(5n+1) {
+  background-image: linear-gradient(to bottom right, #ffd4e5, #ec4899);
+  filter: drop-shadow(0 0 0.6vmin rgba(236, 72, 153, 0.5));
+}
+.petal:nth-child(5n+2) {
+  background-image: linear-gradient(to bottom right, #fed7aa, #f97316);
+  filter: drop-shadow(0 0 0.6vmin rgba(249, 115, 22, 0.5));
+}
+.petal:nth-child(5n+3) {
+  background-image: linear-gradient(to bottom right, #cffafe, #06b6d4);
+  filter: drop-shadow(0 0 0.6vmin rgba(6, 182, 212, 0.5));
+}
+.petal:nth-child(5n+4) {
+  background-image: linear-gradient(to bottom right, #fef08a, #eab308);
+  filter: drop-shadow(0 0 0.6vmin rgba(234, 179, 8, 0.5));
+}
+.petal:nth-child(5n) {
+  background-image: linear-gradient(to bottom right, #e9d5ff, #a855f7);
+  filter: drop-shadow(0 0 0.6vmin rgba(168, 85, 247, 0.5));
 }
 
 @keyframes petal-fall {
@@ -890,10 +815,50 @@ body,
 }
 @keyframes moving-flower-5 {
   0%, 100% {
-    transform: rotate(14deg) scale(0.62);
+    transform: rotate(14deg) scale(0.68);
   }
   50% {
-    transform: rotate(10deg) scale(0.62) rotateY(-10deg);
+    transform: rotate(10deg) scale(0.68) rotateY(-10deg);
+  }
+}
+@keyframes moving-flower-6 {
+  0%, 100% {
+    transform: rotate(-20deg) scale(0.65);
+  }
+  50% {
+    transform: rotate(-24deg) scale(0.65) rotateY(12deg);
+  }
+}
+@keyframes moving-flower-7 {
+  0%, 100% {
+    transform: rotate(20deg) scale(0.65);
+  }
+  50% {
+    transform: rotate(16deg) scale(0.65) rotateY(-12deg);
+  }
+}
+@keyframes moving-flower-8 {
+  0%, 100% {
+    transform: rotate(-26deg) scale(0.56);
+  }
+  50% {
+    transform: rotate(-30deg) scale(0.56) rotateY(10deg);
+  }
+}
+@keyframes moving-flower-9 {
+  0%, 100% {
+    transform: rotate(24deg) scale(0.56);
+  }
+  50% {
+    transform: rotate(20deg) scale(0.56) rotateY(-10deg);
+  }
+}
+@keyframes moving-flower-10 {
+  0%, 100% {
+    transform: rotate(-6deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(-9deg) scale(0.8) rotateY(8deg);
   }
 }
 @keyframes glow-pulse {
@@ -971,32 +936,39 @@ body,
   z-index: 10;
   --fl-speed: 0.8s;
 }
+/* Flower 1: Radiant Rose Pink (Center tall) */
 .flower--1 {
+  --p-light: #ffd4e5;
+  --p-mid: #ff69b4;
+  --p-deep: #db2777;
+  --p-glow: #f43f5e;
+  --p-soft: #fff0f6;
+  --f-deep: #831843;
+  --f-mid: #be185d;
+  --f-light: #f472b6;
   animation: moving-flower-1 4s linear infinite;
 }
 .flower--1 .flower__line {
   height: 70vmin;
   animation-delay: 0.3s;
 }
-.flower--1 .flower__line__leaf--1 {
-  animation: blooming-leaf-right var(--fl-speed) 1.6s backwards;
-}
-.flower--1 .flower__line__leaf--2 {
-  animation: blooming-leaf-right var(--fl-speed) 1.4s backwards;
-}
-.flower--1 .flower__line__leaf--3 {
-  animation: blooming-leaf-left var(--fl-speed) 1.2s backwards;
-}
-.flower--1 .flower__line__leaf--4 {
-  animation: blooming-leaf-left var(--fl-speed) 1s backwards;
-}
-.flower--1 .flower__line__leaf--5 {
-  animation: blooming-leaf-right var(--fl-speed) 1.8s backwards;
-}
-.flower--1 .flower__line__leaf--6 {
-  animation: blooming-leaf-left var(--fl-speed) 2s backwards;
-}
+.flower--1 .flower__line__leaf--1 { animation: blooming-leaf-right var(--fl-speed) 1.6s backwards; }
+.flower--1 .flower__line__leaf--2 { animation: blooming-leaf-right var(--fl-speed) 1.4s backwards; }
+.flower--1 .flower__line__leaf--3 { animation: blooming-leaf-left var(--fl-speed) 1.2s backwards; }
+.flower--1 .flower__line__leaf--4 { animation: blooming-leaf-left var(--fl-speed) 1s backwards; }
+.flower--1 .flower__line__leaf--5 { animation: blooming-leaf-right var(--fl-speed) 1.8s backwards; }
+.flower--1 .flower__line__leaf--6 { animation: blooming-leaf-left var(--fl-speed) 2s backwards; }
+
+/* Flower 2: Royal Amethyst Violet (Right-center) */
 .flower--2 {
+  --p-light: #f3e8ff;
+  --p-mid: #c084fc;
+  --p-deep: #7e22ce;
+  --p-glow: #a855f7;
+  --p-soft: #faf5ff;
+  --f-deep: #4c1d95;
+  --f-mid: #6d28d9;
+  --f-light: #a78bfa;
   left: 50%;
   transform: rotate(20deg);
   animation: moving-flower-2 4s linear infinite;
@@ -1005,19 +977,21 @@ body,
   height: 60vmin;
   animation-delay: 0.6s;
 }
-.flower--2 .flower__line__leaf--1 {
-  animation: blooming-leaf-right var(--fl-speed) 1.9s backwards;
-}
-.flower--2 .flower__line__leaf--2 {
-  animation: blooming-leaf-right var(--fl-speed) 1.7s backwards;
-}
-.flower--2 .flower__line__leaf--3 {
-  animation: blooming-leaf-left var(--fl-speed) 1.5s backwards;
-}
-.flower--2 .flower__line__leaf--4 {
-  animation: blooming-leaf-left var(--fl-speed) 1.3s backwards;
-}
+.flower--2 .flower__line__leaf--1 { animation: blooming-leaf-right var(--fl-speed) 1.9s backwards; }
+.flower--2 .flower__line__leaf--2 { animation: blooming-leaf-right var(--fl-speed) 1.7s backwards; }
+.flower--2 .flower__line__leaf--3 { animation: blooming-leaf-left var(--fl-speed) 1.5s backwards; }
+.flower--2 .flower__line__leaf--4 { animation: blooming-leaf-left var(--fl-speed) 1.3s backwards; }
+
+/* Flower 3: Golden Sunburst Amber (Left-center) */
 .flower--3 {
+  --p-light: #fef9c3;
+  --p-mid: #facc15;
+  --p-deep: #ca8a04;
+  --p-glow: #eab308;
+  --p-soft: #fefce8;
+  --f-deep: #713f12;
+  --f-mid: #a16207;
+  --f-light: #fde047;
   left: 50%;
   transform: rotate(-15deg);
   animation: moving-flower-3 4s linear infinite;
@@ -1025,62 +999,179 @@ body,
 .flower--3 .flower__line {
   animation-delay: 0.9s;
 }
-.flower--3 .flower__line__leaf--1 {
-  animation: blooming-leaf-right var(--fl-speed) 2.5s backwards;
-}
-.flower--3 .flower__line__leaf--2 {
-  animation: blooming-leaf-right var(--fl-speed) 2.3s backwards;
-}
-.flower--3 .flower__line__leaf--3 {
-  animation: blooming-leaf-left var(--fl-speed) 2.1s backwards;
-}
-.flower--3 .flower__line__leaf--4 {
-  animation: blooming-leaf-left var(--fl-speed) 1.9s backwards;
-}
+.flower--3 .flower__line__leaf--1 { animation: blooming-leaf-right var(--fl-speed) 2.5s backwards; }
+.flower--3 .flower__line__leaf--2 { animation: blooming-leaf-right var(--fl-speed) 2.3s backwards; }
+.flower--3 .flower__line__leaf--3 { animation: blooming-leaf-left var(--fl-speed) 2.1s backwards; }
+.flower--3 .flower__line__leaf--4 { animation: blooming-leaf-left var(--fl-speed) 1.9s backwards; }
+
+/* Flower 4: Celestial Aquamarine Cyan (Mid-left) */
 .flower--4 {
-  left: -38vmin;
+  --p-light: #cffafe;
+  --p-mid: #22d3ee;
+  --p-deep: #0891b2;
+  --p-glow: #06b6d4;
+  --p-soft: #ecfeff;
+  --f-deep: #164e63;
+  --f-mid: #0e7490;
+  --f-light: #67e8f9;
+  left: -34vmin;
   bottom: 12vmin;
   transform: rotate(-12deg) scale(0.72);
   animation: moving-flower-4 4.5s linear infinite;
 }
 .flower--4 .flower__line {
-  height: 50vmin;
+  height: 52vmin;
   animation-delay: 1.2s;
 }
-.flower--4 .flower__line__leaf--1 {
-  animation: blooming-leaf-right var(--fl-speed) 2.8s backwards;
-}
-.flower--4 .flower__line__leaf--2 {
-  animation: blooming-leaf-right var(--fl-speed) 2.6s backwards;
-}
-.flower--4 .flower__line__leaf--3 {
-  animation: blooming-leaf-left var(--fl-speed) 2.4s backwards;
-}
-.flower--4 .flower__line__leaf--4 {
-  animation: blooming-leaf-left var(--fl-speed) 2.2s backwards;
-}
+.flower--4 .flower__line__leaf--1 { animation: blooming-leaf-right var(--fl-speed) 2.8s backwards; }
+.flower--4 .flower__line__leaf--2 { animation: blooming-leaf-right var(--fl-speed) 2.6s backwards; }
+.flower--4 .flower__line__leaf--3 { animation: blooming-leaf-left var(--fl-speed) 2.4s backwards; }
+.flower--4 .flower__line__leaf--4 { animation: blooming-leaf-left var(--fl-speed) 2.2s backwards; }
+
+/* Flower 5: Passion Crimson Ruby (Mid-right) */
 .flower--5 {
-  left: 36vmin;
-  bottom: 14vmin;
-  transform: rotate(14deg) scale(0.62);
+  --p-light: #ffe4e6;
+  --p-mid: #fb7185;
+  --p-deep: #be123c;
+  --p-glow: #e11d48;
+  --p-soft: #fff1f2;
+  --f-deep: #881337;
+  --f-mid: #9f1239;
+  --f-light: #fda4af;
+  left: 34vmin;
+  bottom: 13vmin;
+  transform: rotate(14deg) scale(0.68);
   animation: moving-flower-5 5s linear infinite;
 }
 .flower--5 .flower__line {
-  height: 44vmin;
+  height: 48vmin;
   animation-delay: 1.5s;
 }
-.flower--5 .flower__line__leaf--1 {
-  animation: blooming-leaf-right var(--fl-speed) 3.2s backwards;
+.flower--5 .flower__line__leaf--1 { animation: blooming-leaf-right var(--fl-speed) 3.2s backwards; }
+.flower--5 .flower__line__leaf--2 { animation: blooming-leaf-right var(--fl-speed) 3s backwards; }
+.flower--5 .flower__line__leaf--3 { animation: blooming-leaf-left var(--fl-speed) 2.8s backwards; }
+.flower--5 .flower__line__leaf--4 { animation: blooming-leaf-left var(--fl-speed) 2.6s backwards; }
+
+/* Flower 6: Sunset Tangerine Orange (Front-left) */
+.flower--6 {
+  --p-light: #ffedd5;
+  --p-mid: #fb923c;
+  --p-deep: #c2410c;
+  --p-glow: #ea580c;
+  --p-soft: #fff7ed;
+  --f-deep: #7c2d12;
+  --f-mid: #9a3412;
+  --f-light: #fdba74;
+  left: -48vmin;
+  bottom: 8vmin;
+  transform: rotate(-20deg) scale(0.65);
+  animation: moving-flower-6 4.6s linear infinite;
 }
-.flower--5 .flower__line__leaf--2 {
-  animation: blooming-leaf-right var(--fl-speed) 3s backwards;
+.flower--6 .flower__line {
+  height: 46vmin;
+  animation-delay: 1.8s;
 }
-.flower--5 .flower__line__leaf--3 {
-  animation: blooming-leaf-left var(--fl-speed) 2.8s backwards;
+.flower--6 .flower__line__leaf--1 { animation: blooming-leaf-right var(--fl-speed) 3.5s backwards; }
+.flower--6 .flower__line__leaf--2 { animation: blooming-leaf-right var(--fl-speed) 3.3s backwards; }
+.flower--6 .flower__line__leaf--3 { animation: blooming-leaf-left var(--fl-speed) 3.1s backwards; }
+.flower--6 .flower__line__leaf--4 { animation: blooming-leaf-left var(--fl-speed) 2.9s backwards; }
+
+/* Flower 7: Neon Fuchsia Magenta (Front-right) */
+.flower--7 {
+  --p-light: #fce7f3;
+  --p-mid: #f472b6;
+  --p-deep: #a21caf;
+  --p-glow: #c026d3;
+  --p-soft: #fdf2f8;
+  --f-deep: #701a75;
+  --f-mid: #86198f;
+  --f-light: #e879f9;
+  left: 48vmin;
+  bottom: 9vmin;
+  transform: rotate(20deg) scale(0.65);
+  animation: moving-flower-7 4.4s linear infinite;
 }
-.flower--5 .flower__line__leaf--4 {
-  animation: blooming-leaf-left var(--fl-speed) 2.6s backwards;
+.flower--7 .flower__line {
+  height: 44vmin;
+  animation-delay: 2.1s;
 }
+.flower--7 .flower__line__leaf--1 { animation: blooming-leaf-right var(--fl-speed) 3.8s backwards; }
+.flower--7 .flower__line__leaf--2 { animation: blooming-leaf-right var(--fl-speed) 3.6s backwards; }
+.flower--7 .flower__line__leaf--3 { animation: blooming-leaf-left var(--fl-speed) 3.4s backwards; }
+.flower--7 .flower__line__leaf--4 { animation: blooming-leaf-left var(--fl-speed) 3.2s backwards; }
+
+/* Flower 8: Enchanted Emerald Jade (Outer-left) */
+.flower--8 {
+  --p-light: #d1fae5;
+  --p-mid: #34d399;
+  --p-deep: #047857;
+  --p-glow: #10b981;
+  --p-soft: #ecfdf5;
+  --f-deep: #064e3b;
+  --f-mid: #065f46;
+  --f-light: #6ee7b7;
+  left: -62vmin;
+  bottom: 11vmin;
+  transform: rotate(-26deg) scale(0.56);
+  animation: moving-flower-8 5.2s linear infinite;
+}
+.flower--8 .flower__line {
+  height: 40vmin;
+  animation-delay: 2.4s;
+}
+.flower--8 .flower__line__leaf--1 { animation: blooming-leaf-right var(--fl-speed) 4.1s backwards; }
+.flower--8 .flower__line__leaf--2 { animation: blooming-leaf-right var(--fl-speed) 3.9s backwards; }
+.flower--8 .flower__line__leaf--3 { animation: blooming-leaf-left var(--fl-speed) 3.7s backwards; }
+.flower--8 .flower__line__leaf--4 { animation: blooming-leaf-left var(--fl-speed) 3.5s backwards; }
+
+/* Flower 9: Twilight Royal Indigo (Outer-right) */
+.flower--9 {
+  --p-light: #e0e7ff;
+  --p-mid: #818cf8;
+  --p-deep: #3730a3;
+  --p-glow: #4f46e5;
+  --p-soft: #eef2ff;
+  --f-deep: #312e81;
+  --f-mid: #3730a3;
+  --f-light: #a5b4fc;
+  left: 64vmin;
+  bottom: 11vmin;
+  transform: rotate(24deg) scale(0.56);
+  animation: moving-flower-9 4.8s linear infinite;
+}
+.flower--9 .flower__line {
+  height: 42vmin;
+  animation-delay: 2.7s;
+}
+.flower--9 .flower__line__leaf--1 { animation: blooming-leaf-right var(--fl-speed) 4.4s backwards; }
+.flower--9 .flower__line__leaf--2 { animation: blooming-leaf-right var(--fl-speed) 4.2s backwards; }
+.flower--9 .flower__line__leaf--3 { animation: blooming-leaf-left var(--fl-speed) 4.0s backwards; }
+.flower--9 .flower__line__leaf--4 { animation: blooming-leaf-left var(--fl-speed) 3.8s backwards; }
+
+/* Flower 10: Starlight Pearl Lavender (Back-center depth) */
+.flower--10 {
+  --p-light: #ffffff;
+  --p-mid: #ddd6fe;
+  --p-deep: #7c3aed;
+  --p-glow: #8b5cf6;
+  --p-soft: #ffffff;
+  --f-deep: #5b21b6;
+  --f-mid: #6d28d9;
+  --f-light: #c4b5fd;
+  left: -8vmin;
+  bottom: 15vmin;
+  transform: rotate(-6deg) scale(0.8);
+  z-index: 8;
+  animation: moving-flower-10 4.3s linear infinite;
+}
+.flower--10 .flower__line {
+  height: 64vmin;
+  animation-delay: 1.0s;
+}
+.flower--10 .flower__line__leaf--1 { animation: blooming-leaf-right var(--fl-speed) 2.6s backwards; }
+.flower--10 .flower__line__leaf--2 { animation: blooming-leaf-right var(--fl-speed) 2.4s backwards; }
+.flower--10 .flower__line__leaf--3 { animation: blooming-leaf-left var(--fl-speed) 2.2s backwards; }
+.flower--10 .flower__line__leaf--4 { animation: blooming-leaf-left var(--fl-speed) 2.0s backwards; }
 .flower__leafs {
   position: relative;
   animation: blooming-flower 2s backwards;
@@ -1099,6 +1190,21 @@ body,
 }
 .flower__leafs--5 {
   animation-delay: 2.3s;
+}
+.flower__leafs--6 {
+  animation-delay: 2.6s;
+}
+.flower__leafs--7 {
+  animation-delay: 2.9s;
+}
+.flower__leafs--8 {
+  animation-delay: 3.2s;
+}
+.flower__leafs--9 {
+  animation-delay: 3.5s;
+}
+.flower__leafs--10 {
+  animation-delay: 1.8s;
 }
 .flower__leafs::after {
   content: "";
@@ -2153,9 +2259,25 @@ body,
   width: 0.9vmin;
   height: 0.9vmin;
   border-radius: 50%;
-  background-color: var(--p-soft);
-  box-shadow: 0 0 1.6vmin 0.3vmin rgba(255, 142, 199, 0.85);
+  background-color: #fef08a;
+  box-shadow: 0 0 1.6vmin 0.3vmin rgba(250, 204, 21, 0.9);
   animation: firefly-drift var(--t, 9s) var(--d, 0s) ease-in-out infinite;
+}
+.firefly:nth-child(4n+1) {
+  background-color: #fef08a;
+  box-shadow: 0 0 1.6vmin 0.3vmin rgba(250, 204, 21, 0.9);
+}
+.firefly:nth-child(4n+2) {
+  background-color: #a5f3fc;
+  box-shadow: 0 0 1.6vmin 0.3vmin rgba(34, 211, 238, 0.9);
+}
+.firefly:nth-child(4n+3) {
+  background-color: #fbcfe8;
+  box-shadow: 0 0 1.6vmin 0.3vmin rgba(244, 114, 182, 0.9);
+}
+.firefly:nth-child(4n) {
+  background-color: #bbf7d0;
+  box-shadow: 0 0 1.6vmin 0.3vmin rgba(52, 211, 153, 0.9);
 }
 
 @keyframes firefly-drift {

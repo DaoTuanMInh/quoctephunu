@@ -260,6 +260,110 @@ export default function NightGardenScene({
         </div>
       </div>
 
+      <div className="flower flower--6">
+        <div className="flower__leafs flower__leafs--6">
+          <div className="flower__leaf flower__leaf--1"></div>
+          <div className="flower__leaf flower__leaf--2"></div>
+          <div className="flower__leaf flower__leaf--3"></div>
+          <div className="flower__leaf flower__leaf--4"></div>
+          <div className="flower__white-circle"></div>
+          <div className="flower__light flower__light--1"></div>
+          <div className="flower__light flower__light--2"></div>
+          <div className="flower__light flower__light--3"></div>
+          <div className="flower__light flower__light--4"></div>
+          <div className="flower__light flower__light--5"></div>
+        </div>
+        <div className="flower__line">
+          <div className="flower__line__leaf flower__line__leaf--1"></div>
+          <div className="flower__line__leaf flower__line__leaf--2"></div>
+          <div className="flower__line__leaf flower__line__leaf--3"></div>
+          <div className="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+
+      <div className="flower flower--7">
+        <div className="flower__leafs flower__leafs--7">
+          <div className="flower__leaf flower__leaf--1"></div>
+          <div className="flower__leaf flower__leaf--2"></div>
+          <div className="flower__leaf flower__leaf--3"></div>
+          <div className="flower__leaf flower__leaf--4"></div>
+          <div className="flower__white-circle"></div>
+          <div className="flower__light flower__light--1"></div>
+          <div className="flower__light flower__light--2"></div>
+          <div className="flower__light flower__light--3"></div>
+          <div className="flower__light flower__light--4"></div>
+          <div className="flower__light flower__light--5"></div>
+        </div>
+        <div className="flower__line">
+          <div className="flower__line__leaf flower__line__leaf--1"></div>
+          <div className="flower__line__leaf flower__line__leaf--2"></div>
+          <div className="flower__line__leaf flower__line__leaf--3"></div>
+          <div className="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+
+      <div className="flower flower--8">
+        <div className="flower__leafs flower__leafs--8">
+          <div className="flower__leaf flower__leaf--1"></div>
+          <div className="flower__leaf flower__leaf--2"></div>
+          <div className="flower__leaf flower__leaf--3"></div>
+          <div className="flower__leaf flower__leaf--4"></div>
+          <div className="flower__white-circle"></div>
+          <div className="flower__light flower__light--1"></div>
+          <div className="flower__light flower__light--2"></div>
+          <div className="flower__light flower__light--3"></div>
+          <div className="flower__light flower__light--4"></div>
+        </div>
+        <div className="flower__line">
+          <div className="flower__line__leaf flower__line__leaf--1"></div>
+          <div className="flower__line__leaf flower__line__leaf--2"></div>
+          <div className="flower__line__leaf flower__line__leaf--3"></div>
+          <div className="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+
+      <div className="flower flower--9">
+        <div className="flower__leafs flower__leafs--9">
+          <div className="flower__leaf flower__leaf--1"></div>
+          <div className="flower__leaf flower__leaf--2"></div>
+          <div className="flower__leaf flower__leaf--3"></div>
+          <div className="flower__leaf flower__leaf--4"></div>
+          <div className="flower__white-circle"></div>
+          <div className="flower__light flower__light--1"></div>
+          <div className="flower__light flower__light--2"></div>
+          <div className="flower__light flower__light--3"></div>
+          <div className="flower__light flower__light--4"></div>
+        </div>
+        <div className="flower__line">
+          <div className="flower__line__leaf flower__line__leaf--1"></div>
+          <div className="flower__line__leaf flower__line__leaf--2"></div>
+          <div className="flower__line__leaf flower__line__leaf--3"></div>
+          <div className="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+
+      <div className="flower flower--10">
+        <div className="flower__leafs flower__leafs--10">
+          <div className="flower__leaf flower__leaf--1"></div>
+          <div className="flower__leaf flower__leaf--2"></div>
+          <div className="flower__leaf flower__leaf--3"></div>
+          <div className="flower__leaf flower__leaf--4"></div>
+          <div className="flower__white-circle"></div>
+          <div className="flower__light flower__light--1"></div>
+          <div className="flower__light flower__light--2"></div>
+          <div className="flower__light flower__light--3"></div>
+          <div className="flower__light flower__light--4"></div>
+          <div className="flower__light flower__light--5"></div>
+          <div className="flower__light flower__light--6"></div>
+        </div>
+        <div className="flower__line">
+          <div className="flower__line__leaf flower__line__leaf--1"></div>
+          <div className="flower__line__leaf flower__line__leaf--2"></div>
+          <div className="flower__line__leaf flower__line__leaf--3"></div>
+          <div className="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+
       <div className="grow-ans" style={{ '--d': '1.2s' } as React.CSSProperties}>
         <div className="flower__g-long">
           <div className="flower__g-long__top"></div>
